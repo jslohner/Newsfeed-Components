@@ -114,7 +114,7 @@ const data = [
 */
 
 // step 1
-function makeArticle({title, date, firstParagraph, secondParagraph, thirdParagraph}) {
+function makeArticle(object) {
 
 	// create elements
 	let article = document.createElement('div');
@@ -139,11 +139,11 @@ function makeArticle({title, date, firstParagraph, secondParagraph, thirdParagra
 	articleButton.classList.add('expandButton');
 
 	// add content
-	articleTitle.textContent = title;
-	articleDate.textContent = date;
-	articleP1.textContent = firstParagraph;
-	articleP2.textContent = secondParagraph;
-	articleP3.textContent = thirdParagraph;
+	articleTitle.textContent = object.title;
+	articleDate.textContent = object.date;
+	articleP1.textContent = object.firstParagraph;
+	articleP2.textContent = object.secondParagraph;
+	articleP3.textContent = object.thirdParagraph;
 	articleButton.textContent = 'Expand';
 
 
