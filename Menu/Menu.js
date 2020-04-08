@@ -45,17 +45,21 @@ function createMenu(menuItems){
 
 	// create structure
 	menu.appendChild(list);
-	menuItems.forEach((itemText) => {
-		let listItem = document.createElement('li');
-		listItem.textContent = itemText;
-		list.appendChild(listItem);
-	});
+	menuItems.forEach((itemText) => list.appendChild(document.createElement('li')).textContent = itemText);
+
+	// basically the same loop with more steps
+	// menuItems.forEach((itemText) => {
+	// 	let listItem = document.createElement('li');
+	// 	listItem.textContent = itemText;
+	// 	list.appendChild(listItem);
+	// });
+
 
 	// add classes
 	menu.classList.add('menu');
 
 	// add event listeners
-	menuButton.addEventListener('click', (event) => menu.classList.toggle('menu--open'));
+	menuButton.addEventListener('click', () => menu.classList.toggle('menu--open'));
 
 	return menu;
 }
